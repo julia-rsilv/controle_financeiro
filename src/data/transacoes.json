@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "descricao": "Salário",
+        "valor": 3500,
+        "data": "2026-11-05",
+        "tipo": "receita",
+        "categoria_id": 1
+    },
+    {
+        "id": 2,
+        "descricao": "Aluguel",
+        "valor": 1200,
+        "data": "2026-11-06",
+        "tipo": "despesa",
+        "categoria_id": 2
+    },
+    {
+        "id": 3,
+        "descricao": "Supermercado",
+        "valor": 450.75,
+        "data": "2026-11-08",
+        "tipo": "despesa",
+        "categoria_id": 3
+    },
+    {
+        "id": 4,
+        "descricao": "Freelance",
+        "valor": 800,
+        "data": "2026-11-10",
+        "tipo": "receita",
+        "categoria_id": 4
+    },
+    {
+        "id": 5,
+        "descricao": "Conta de energia",
+        "valor": 180.4,
+        "data": "2026-11-10",
+        "tipo": "despesa",
+        "categoria_id": 5
+    }
+]
