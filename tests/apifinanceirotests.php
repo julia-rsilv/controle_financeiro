@@ -507,41 +507,6 @@ final class ApiFinanceiroTests extends TestCase
         );
     }
 
-    public function testMigraTransacoesDoFormatoAnterior(): void
-    {
-        $arquivo = $this->diretorioTemporario . '/transacoes.json';
-        file_put_contents($arquivo, json_encode([
-            [
-                'id' => 1,
-                'descricao' => 'Compra antiga',
-                'valor' => 25,
-                'tipo' => 'despesa',
-                'categoria' => 'Moradia',
-                'data' => '2026-11-06',
-            ],
-        ], JSON_THROW_ON_ERROR));
-
-        $appMigrada = require __DIR__ . '/../src/app.php';
-        $request = (new ServerRequestFactory())->createServerRequest(
-            'GET',
-            'http://localhost/lancamentos/1'
-        );
-        $response = $appMigrada->handle($request);
-
-        self::assertSame(200, $response->getStatusCode());
-        self::assertSame(
-            [
-                'id' => 1,
-                'descricao' => 'Compra antiga',
-                'valor' => 25,
-                'tipo' => 'despesa',
-                'data' => '2026-11-06',
-                'categoria_id' => 2,
-            ],
-            $this->decodificar($response)
-        );
-    }
-
     private function enviar(
         string $metodo,
         string $caminho,

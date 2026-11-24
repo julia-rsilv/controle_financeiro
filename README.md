@@ -148,8 +148,6 @@ $env:FINANCE_DATA_DIR = "C:\caminho\para\dados"
 php -S 127.0.0.1:8080 -t public
 ```
 
-Se já houver transações no formato anterior, com o nome da categoria no campo `categoria`, a aplicação converte os registros para `categoria_id` na inicialização.
-
 ## Publicação no GitHub
 
 O projeto deve ser publicado em um repositório público. Depois de criar o repositório no GitHub, configure o endereço remoto e envie a branch principal:
